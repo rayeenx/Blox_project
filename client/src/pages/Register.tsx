@@ -10,7 +10,6 @@ import { trpc } from "@/lib/trpc";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { VoiceInputButton } from "@/components/VoiceInputButton";
-import { GoogleAuthButton } from "@/components/GoogleAuthButton";
 import { validateEmail, validatePassword, validateName, getPasswordStrength } from "@/lib/validation";
 import { FaceCamera } from "@/components/FaceCamera";
 
@@ -636,8 +635,6 @@ export default function Register() {
                   t("auth.registerButton")
                 )}
               </Button>
-
-              <GoogleAuthButton mode="register" role={role} disabled={loading} />
 
               <p className="text-sm text-muted-foreground text-center pt-2">
                 {t("auth.hasAccount")}{" "}

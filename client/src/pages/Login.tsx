@@ -9,7 +9,6 @@ import { trpc } from "@/lib/trpc";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { VoiceInputButton } from "@/components/VoiceInputButton";
-import { GoogleAuthButton } from "@/components/GoogleAuthButton";
 import { validateEmail } from "@/lib/validation";
 import { FaceCamera } from "@/components/FaceCamera";
 
@@ -330,8 +329,6 @@ export default function Login() {
                   title="Connexion faciale"
                   description="Regardez la caméra pour vous connecter"
                 />
-
-                <GoogleAuthButton mode="login" disabled={loading || faceIdLoading || loginSuccess} />
 
                 <p className="text-center text-sm text-muted-foreground pt-4">
                   Pas encore de compte ?{" "}
